@@ -1,11 +1,12 @@
 module.exports = {
   title: 'cvcoo', //标题
-  description: '开箱即用的组件库文档', //描述
+  description: 'SpringCloud 全套解决方案', //描述
   base: '/cvcoo-portal/', //基本url
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon
   ],
+  theme: 'reco',
   themeConfig: {
     //顶部导航栏配置
     nav: [
