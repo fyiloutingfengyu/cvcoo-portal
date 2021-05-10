@@ -1,7 +1,7 @@
 module.exports = {
   title: 'cvcoo', //标题
   description: '开箱即用的组件库文档', //描述
-  base: '/', //基本url
+  base: '/cvcoo-portal/', //基本url
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon
