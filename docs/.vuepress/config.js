@@ -4,10 +4,11 @@ module.exports = {
   base: '/cvcoo-portal/', //基本url
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
-    ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon
+    ['link', { rel: 'icon', href: '/images/logo.png' }], // 增加一个自定义的 favicon
   ],
-  theme: 'reco',
+  // theme: 'reco',
   themeConfig: {
+    logo: '/images/logo.png',
     //顶部导航栏配置
     nav: [
       { text: '首页', link: '/' },
