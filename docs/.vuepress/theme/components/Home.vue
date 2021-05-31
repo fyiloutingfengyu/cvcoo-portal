@@ -85,7 +85,7 @@
     </div>
     <div class="flow-desc">
       <img class="flow-img" src="../../public/images/flow.jpg" alt="">
-      <ul>
+      <ul class="description-list">
         <li>1. 描述描述描述描述描述描述描述描述</li>
         <li>2. 描述描述描述描述描述描述描述</li>
         <li>3. 描述描述描述描述描述描述描述描</li>
@@ -97,7 +97,7 @@
     <div class="other-info">
       <div class="other-info-content">
         <h3>为何需要CVCOO ?</h3>
-        <ul>
+        <ul class="other-info-desc">
           <li>1. 描述描述描述描述描述描述描述描述</li>
           <li>2. 描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</li>
           <li>3. 描述描述描述描述描述描述描述描描述描述描述描述描述描述描述描</li>
@@ -173,28 +173,23 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  /* todo f reset */
-  ul, li {
-    list-style: none;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
+  h3 {
     margin: 0 0 15px;
     font-weight: 700;
   }
 
   p {
-    margin: 0;
-    padding: 0;
+    line-height: 1.8;
   }
 
   .home-page {
+    padding-bottom: 100px;
     background-color: #fff;
 
     .introduction {
       box-sizing: border-box;
       width: 100%;
-      padding: 80px 100px 60px;
+      padding: 80px 20px 60px;
       background: url("../../public/images/home_bg.jpg") no-repeat center;
       background-size: cover;
 
@@ -213,7 +208,7 @@ export default {
           width: 100px;
           font-size: 24px;
           font-weight: 500;
-          color: #fd7e14;
+          color: $primaryColor;
         }
       }
 
@@ -238,7 +233,7 @@ export default {
           width: 120px;
           height: 48px;
           border-radius: 24px;
-          border: 1px solid #fd7e14;
+          border: 1px solid $primaryColor;
           color: #fff;
           font-size: 18px;
           font-weight: 500;
@@ -250,10 +245,10 @@ export default {
 
         .free {
           margin-right: 30px;
-          background-color: #fd7e14;
+          background-color: $primaryColor;
 
           &:hover {
-            color: #fd7e14;
+            color: $primaryColor;
             background-color: transparent;
           }
         }
@@ -262,7 +257,7 @@ export default {
           background-color: transparent;
 
           &:hover {
-            background-color: #fd7e14;
+            background-color: $primaryColor;
           }
         }
       }
@@ -298,7 +293,7 @@ export default {
           box-sizing: border-box;
           max-width: 350px;
           padding: 50px 45px;
-          margin-bottom: 30px;
+          margin-bottom: 48px;
           background-color: #fff;
           box-shadow: 0 0 20px #f1f1f1;
           border-radius: 5px;
@@ -316,14 +311,14 @@ export default {
         height: 48px;
         margin: 0 auto 120px;
         border-radius: 24px;
-        border: 1px solid #fd7e14;
+        border: 1px solid $primaryColor;
         color: #000;
         font-size: 18px;
         font-weight: 500;
-        background-color: #fd7e14;
+        background-color: $primaryColor;
 
         &:hover {
-          color: #fd7e14;
+          color: $primaryColor;
           background-color: transparent;
         }
       }
@@ -362,15 +357,27 @@ export default {
         max-width: 100%;
         margin-right: 20px;
       }
+
+      .description-list {
+        li {
+          margin-bottom: 16px;
+        }
+      }
     }
 
     .other-info {
-      padding: 30px 0;
+      padding: 30px;
       background-color: #f5f5f5;
 
       .other-info-content {
         max-width: 1140px;
         margin: 0 auto;
+
+        .other-info-desc {
+          li {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
 
@@ -401,6 +408,265 @@ export default {
           box-sizing: border-box;
           max-width: 350px;
           padding: 30px 45px;
+        }
+      }
+    }
+  }
+
+  /* 默认主题
+    $MQNarrow = 959px
+    $MQMobile = 719px
+    $MQMobileNarrow = 419px
+  */
+  @media (max-width: $MQMobile) {
+    .home-page {
+      padding-bottom: 75px;
+
+      .introduction {
+        padding: 60px 20px 40px;
+
+        .label-list {
+          .label-item {
+            width: 76px;
+            font-size: 18px;
+          }
+        }
+
+        .strong {
+          margin: 26px 0;
+          font-size: 30px;
+        }
+
+        .copyright-type {
+          margin-top: 30px;
+
+          .btn-item {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 14px;
+          }
+
+          .free {
+            margin-right: 24px;
+          }
+        }
+      }
+
+      .function-module {
+        max-width: $MQMobile;
+        padding-top: 75px;
+
+        .module-title {
+          margin-bottom: 8px;
+          font-size: 30px;
+        }
+
+        .module-description {
+          font-size: 14px;
+        }
+
+        .function-list {
+          margin-top: 75px;
+
+          .function-item {
+            max-width: 300px;
+            padding: 38px 30px;
+            margin-bottom: 36px;
+            box-shadow: 0 0 16px #f1f1f1;
+            border-radius: 5px;
+
+            &:hover {
+              box-shadow: 0 0 60px #3535352b
+            }
+          }
+        }
+
+        .know-more {
+          display: block;
+          width: 90px;
+          height: 36px;
+          margin: 0 auto 90px;
+          border-radius: 18px;
+          font-size: 14px;
+        }
+      }
+
+      .featured-box {
+        margin: 75px 0;
+
+        .featured-list {
+          max-width: $MQMobile;
+
+          .featured-item {
+            max-width: 350px;
+            padding: 30px 24px;
+          }
+        }
+      }
+
+      .flow-desc {
+        margin-bottom: 75px;
+
+        .flow-img {
+          margin-right: 15px;
+        }
+      }
+
+      .other-info {
+        padding: 24px;
+
+        .other-info-content {
+          max-width: $MQMobile;
+        }
+      }
+
+      .system-list {
+        margin-top: 75px;
+
+        .system-item {
+          margin-bottom: 24px;
+          box-shadow: 0 0 15px #f1f1f1;
+
+          &:hover {
+            box-shadow: 0 0 60px #3535352b
+          }
+
+          img {
+            max-width: 300px;
+          }
+
+          .content {
+            max-width: 300px;
+            padding: 24px 34px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $MQMobileNarrow) {
+    .home-page {
+      padding-bottom: 50px;
+
+      .introduction {
+        padding: 40px 10px 24px;
+
+        .label-list {
+          .label-item {
+            width: 52px;
+            font-size: 12px;
+          }
+        }
+
+        .strong {
+          margin: 16px 0;
+          font-size: 18px;
+        }
+
+        .copyright-type {
+          margin-top: 20px;
+
+          .btn-item {
+            width: 70px;
+            height: 28px;
+            border-radius: 14px;
+            font-size: 12px;
+          }
+
+          .free {
+            margin-right: 16px;
+          }
+        }
+      }
+
+      .function-module {
+        max-width: $MQMobileNarrow;
+        padding-top: 50px;
+
+        .module-title {
+          margin-bottom: 6px;
+          font-size: 20px;
+        }
+
+        .module-description {
+          font-size: 12px;
+        }
+
+        .function-list {
+          margin-top: 50px;
+
+          .function-item {
+            max-width: 350px;
+            padding: 26px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 0 12px #f1f1f1;
+            border-radius: 4px;
+
+            &:hover {
+              box-shadow: 0 0 40px #3535352b
+            }
+          }
+        }
+
+        .know-more {
+          display: block;
+          width: 70px;
+          height: 30px;
+          margin: 0 auto 60px;
+          border-radius: 15px;
+          font-size: 12px;
+        }
+      }
+
+      .featured-box {
+        margin: 50px 0;
+
+        .featured-list {
+          max-width: $MQMobileNarrow;
+
+          .featured-item {
+            max-width: 350px;
+            padding: 20px 24px;
+          }
+        }
+      }
+
+      .flow-desc {
+        margin-bottom: 50px;
+
+        .flow-img {
+          margin-right: 10px;
+        }
+      }
+
+      .other-info {
+        padding: 15px;
+
+        .other-info-content {
+          max-width: $MQMobileNarrow;
+        }
+      }
+
+      .system-list {
+        margin-top: 50px;
+
+        .system-item {
+          margin-bottom: 15px;
+          box-shadow: 0 0 10px #f1f1f1;
+
+          &:hover {
+            box-shadow: 0 0 40px #3535352b
+          }
+
+          img {
+            max-width: 350px;
+          }
+
+          .content {
+            max-width: 350px;
+            padding: 15px 22px;
+          }
         }
       }
     }
