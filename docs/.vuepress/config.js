@@ -1,5 +1,6 @@
 module.exports = {
   title: 'cvcoo', //标题
+  lang: 'zh-CN',
   description: 'SpringCloud 全套解决方案', //描述
   base: '/cvcoo-portal/', //基本url
   // 注入到当前页面的 HTML <head> 中的标签

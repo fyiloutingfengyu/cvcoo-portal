@@ -1,3 +1,7 @@
+---
+lang: zh-CN
+---
+
 ## 购买页面
 
 <center><font color=#1e90ff size=36>扫码支付</font></center>
