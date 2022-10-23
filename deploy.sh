@@ -20,6 +20,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:fyiloutingfengyu/cvcoo-portal.git master:gh-pages
+git push -f git@github.com:fyiloutingfengyu/cvcoo-portal.git main:gh-pages
 
+# 回到原来的目录
 cd -
