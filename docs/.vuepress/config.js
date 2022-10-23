@@ -16,7 +16,7 @@ module.exports = {
       { text: '购买', link: '/buy/' },
       { text: '开发文档', link: '/dev-docs/quick-start' },
       { text: '功能对比', link: '/compare/compare' },
-      { text: '演示', link: 'https://qiaozuji-flms.test.timedigit.com/#/passport/login' } //外部链接
+      { text: '演示', link: '' } //外部链接
     ],
     // 多侧边栏设置
     sidebar: {
